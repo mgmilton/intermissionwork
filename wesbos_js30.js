@@ -42,8 +42,52 @@ const bubbleOrdered = inventors.sort(function(a, b) {
 
 console.table(bubbleOrdered)
 
-const ordered = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
+const bubbleOrderedOneLine = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
 
+console.table(bubbleOrderedOneLine)
+
+
+// Array.prototype.reduce()
+// 4. How many years did all the inventors live?
+var totalYearsForLoop = 0;
+
+for (var i = 0; i < inventors.length; i++) {
+    totalYearsForLoop += inventors[i].year
+}
+
+console.log(totalYearsForLoop)
+
+
+const totalYearsReduce = inventors.reduce((total, inventor) => {
+  return total + (inventor.passed - inventor.year);
+}, 0);
+
+console.log(totalYearsReduce)
+
+// 5. Sort the inventors by years lived
+
+const inventorsByAge = inventors.sort((a, b) => (a.passed - a.year) > (b.passed - b.year) ? 1 : -1);
+
+console.table(inventorsByAge)
+
+const oldest = inventors.sort(function(a, b) {
+  const lastPerson = a.passed - a.year;
+  const nextPerson = b.passed - b.year;
+  return lastPerson > nextPerson ? -1 : 1;
+});
+
+console.table(oldest)
+
+// 6. Create a list of Boulevards in Paris that contain 'de' anywhere in the name
+
+
+// 7. sort Exercise
+// Sort the people alphabetically by last name
+
+// 8. Reduce Exercise
+// Sum up the instances of each of these
+
+const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
 
 // Array Cardio Day 2
 
