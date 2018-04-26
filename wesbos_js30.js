@@ -25,10 +25,13 @@ console.table(fifteen_multiline)
 // Array.prototype.map()
 // 2. Return an array of the inventory first and last names
 
+const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
+console.log(fullNames)
 
+// Array.prototype.sort()
+// 3. Sort the inventors by birthdate, oldest to youngest
 
-
-
+const 
 
 // Array Cardio Day 2
 
