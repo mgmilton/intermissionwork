@@ -1,4 +1,3 @@
-var array = [5, 0, 2, 6, 9]
 function bubbleSorter(array) {
   var swapped;
   do {
